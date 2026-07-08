@@ -1,0 +1,329 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #0d0d0d;
+    --snd-bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --main-color: #ff0055; 
+    --neon-glow: #ff0055;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--neon-glow);
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 2.5rem;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--neon-glow);
+}
+
+#menu-icon {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Section Layout */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 7% 2rem;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 1.1rem;
+    color: var(--main-color);
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--neon-glow);
+}
+
+.home-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.home-content p {
+    font-size: 1rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+}
+
+/* Social Media Icons & Buttons */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin: 2rem 1.5rem 2rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background: var(--main-color);
+    border-radius: 30px;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px var(--neon-glow);
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px var(--neon-glow);
+}
+
+.contact-btn {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+}
+
+.contact-btn:hover {
+    background: var(--main-color);
+}
+
+/* Profile Image Glowing Ring */
+.home-img {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-circle::before {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    background: linear-gradient(45deg, #ff0055, #7a00ff);
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--neon-glow);
+    z-index: -1;
+}
+
+.image-box {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: luminosity;
+}
+
+/* Headings */
+.heading {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--neon-glow);
+}
+
+/* Projects Section Styling */
+.projects {
+    background: var(--snd-bg-color);
+    padding: 6rem 7%;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-box {
+    background: var(--bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.project-box:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px var(--neon-glow);
+    transform: scale(1.02);
+}
+
+.project-icon {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--neon-glow);
+    margin-bottom: 1.5rem;
+}
+
+.project-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-box p {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.project-btn {
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 6rem 7%;
+}
+
+.contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact form .input-box input, .contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+    .header { padding: 2rem 4%; }
+    .home { padding: 8rem 4% 2rem; flex-direction: column-reverse; gap: 3rem; text-align: center; }
+    .home-content h1 { font-size: 2.8rem; }
+    .btn-group { justify-content: center; }
+    .social-media a { margin: 2rem 0.7rem; }
+    .projects, .contact { padding: 4rem 4%; }
+}
+
+@media (max-width: 768px) {
+    #menu-icon { display: block; }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: rgba(13, 13, 13, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transition: .25s ease;
+    }
+    .navbar.active { left: 0; }
+    .navbar a { display: block; font-size: 1.3rem; margin: 2rem 0; }
+    .home-img { width: 280px; height: 280px; }
+    .image-box { width: 260px; height: 260px; }
+    .contact form .input-box input { width: 100%; }
+}
